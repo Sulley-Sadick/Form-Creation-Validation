@@ -9,9 +9,9 @@ window.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     // select values for each input fields
-    const usernameInput = document.getElementById("username").value.trim();
-    const emailInput = document.getElementById("email").value.trim();
-    const passwordInput = document.getElementById("password").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
     // initializing validation variables
     let isValid = true;
@@ -19,8 +19,8 @@ window.addEventListener("DOMContentLoaded", function () {
     // array to hold error messages
     const messages = [];
 
-    // usernameInput.length < 3
-    if (usernameInput.length < 3) {
+    // username.length < 3
+    if (username.length < 3) {
       // set isValid = false
       isValid = false;
 
@@ -28,8 +28,8 @@ window.addEventListener("DOMContentLoaded", function () {
       messages.push("username should be atleast more than 3 characters.");
     }
 
-    // emailInput does not contain @
-    if (!emailInput.includes("@") && !emailInput.includes(".")) {
+    // email does not contain @
+    if (!email.includes("@") && !email.includes(".")) {
       // set isValid = false
 
       isValid = false;
@@ -38,8 +38,8 @@ window.addEventListener("DOMContentLoaded", function () {
       messages.push("email should contain @ sign.");
     }
 
-    // passwordInput.length <= 8
-    if (passwordInput.length <= 8) {
+    // password.length <= 8
+    if (password.length <= 8) {
       // set isValid = false
       isValid = false;
 
