@@ -28,19 +28,17 @@ const fetchUserData = async function () {
       li.textContent = user.name;
 
       // append li to userList elements
-      userList.append(li);
+      userList.appendChild(li);
     });
 
-    // userList to dataContainer
-    dataContainer.append(userList);
-
-    console.log(userList);
+    // append userList to dataContainer
+    dataContainer.appendChild(userList);
   } catch (err) {
     // set textContent of dataContainer = ""
     dataContainer.textContent = "";
 
     // set textContent of dataContainer = Failed to load user data
-    dataContainer.textContent = " Failed to load user data.";
+    dataContainer.textContent = "Failed to load user data.";
   }
 };
 
